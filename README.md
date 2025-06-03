@@ -132,20 +132,6 @@ Clase utilitaria para manejo de JWTs.
 
 Esta clase define cómo se comporta Spring Security dentro de la aplicación.
 
-### Beans y Flujo de Configuración
-
-```mermaid
-flowchart TD
-    A[SecurityFilterChain] --> B[HttpSecurity config]
-    B --> C[/login permisivo]
-    B --> D[anyRequest autenticado]
-    B --> E[session STATELESS]
-    B --> F[addFilter JwtAuthenticationFilter]
-    B --> G[addFilter JwtAuthorizationFilter]
-
-    H[AuthenticationManager] --> I[Autenticación personalizada]
-    J[PasswordEncoder] --> K[BCryptPasswordEncoder()]
-```
 
 ### Detalle de Beans
 
